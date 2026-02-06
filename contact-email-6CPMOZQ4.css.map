@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/contact-email/contact-email.css"],
+  "sourcesContent": ["button {\r\n  padding: 10px;\r\n  font-size: 1rem;\r\n  cursor: pointer;\r\n  border-radius: 4px;\r\n  background-color: #007bff;\r\n  color: white;\r\n  border: none;\r\n}\r\n\r\n.success-message {\r\n  color: green;\r\n  font-weight: bold;\r\n}\r\n\r\n.error-message {\r\n  color: red;\r\n  font-size: 12px;\r\n}\r\n\r\n\r\nbutton[type=\"submit\"]:hover:not(:disabled) {\r\n  background-color: #0056b3;   /* darker blue on hover */\r\n}\r\n\r\nbutton[type=\"submit\"]:disabled {\r\n  background-color: #007bff;   /* same base color */\r\n  opacity: 0.5;                /* lighter, semi-transparent */\r\n  cursor: not-allowed;          /* indicates disabled */\r\n}"],
+  "mappings": "AAAA,eACW,KACT,UAAW,KACX,OAAQ,QAHV,cAIiB,IACf,iBAAkB,QAClB,MAAO,KACP,OAAQ,IACV,CAEA,CAAC,gBACC,MAAO,MACP,YAAa,GACf,CAEA,CAAC,cACC,MAAO,IACP,UAAW,IACb,CAGA,MAAM,CAAC,YAAc,MAAM,KAAK,WAC9B,iBAAkB,OACpB,CAEA,MAAM,CAAC,YAAc,UACnB,iBAAkB,QAClB,QAAS,GACT,OAAQ,WACV",
+  "names": []
+}
