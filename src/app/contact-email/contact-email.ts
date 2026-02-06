@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,18 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-email.css',
 })
 export class ContactEmail {
- successMessage: string = '';
+
+  @ViewChild('contactForm') contactForm!: NgForm;
+
+  ngAfterViewInit() {
+    // Listen for any change in form fields
+    this.contactForm.valueChanges?.subscribe(() => {
+      this.successMessage = '';
+      this.errorMessage = '';
+    });
+  }
+  
+  successMessage: string = '';
   errorMessage: string = '';
   sending: boolean = false;
 

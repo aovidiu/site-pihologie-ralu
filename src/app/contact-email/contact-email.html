@@ -1,12 +1,22 @@
-<div class="contact-form">
+<div class="tm-contact-form">
   <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
-    <input type="text" name="name" ngModel placeholder="Your Name" required>
-    <input type="email" name="email" ngModel placeholder="Your Email" required>
-    <textarea name="message" ngModel placeholder="Your Message" required></textarea>
+    <div class="tm-form-group">
+        <input type="text"  name="name" ngModel placeholder="Nume" required>
+    </div>
+
+    <div class="tm-form-group">
+        <input type="email" name="email" ngModel placeholder="Email Dvs" required>
+    </div>
+
+    <div class="tm-form-group">
+        <textarea name="message" ngModel rows="5" placeholder="Message" required></textarea>
+    </div>
 
     <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
     <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
     
-    <button type="submit" [disabled]="contactForm.invalid || sending">Send</button>    
+    <div class="tm-text-right">
+      <button type="submit" class="tm-btn tm-btn-secondary tm-btn-pad-big" [disabled]="contactForm.invalid || sending">Send</button>
+    </div> 
   </form>
 </div>
