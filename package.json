@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "git push origin --delete gh-pages && ng build --configuration production --base-href \"/site-pihologie-ralu/\" && npx ngh --dir=dist/psihologie-ralu/browser",
+    "preview": "ng build --configuration production --base-href \"/\" && npx http-server dist/psihologie-ralu/browser"
   },
   "prettier": {
     "printWidth": 100,
