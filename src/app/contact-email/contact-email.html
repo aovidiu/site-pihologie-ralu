@@ -1,0 +1,12 @@
+<div class="contact-form">
+  <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
+    <input type="text" name="name" ngModel placeholder="Your Name" required>
+    <input type="email" name="email" ngModel placeholder="Your Email" required>
+    <textarea name="message" ngModel placeholder="Your Message" required></textarea>
+
+    <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+    
+    <button type="submit" [disabled]="contactForm.invalid || sending">Send</button>    
+  </form>
+</div>

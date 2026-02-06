@@ -16,6 +16,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "sourceMap": true,
             "baseHref": "/site-psihologie-ralu/",
             "outputPath": "dist/psihologie-ralu",
             "browser": "src/main.ts",
@@ -53,7 +54,7 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular/build:dev-server",

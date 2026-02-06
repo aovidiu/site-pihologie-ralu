@@ -1,6 +1,8 @@
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ReadMoreComponent } from '../app/read-more/read-more';
+import { ContactEmail } from '../app/contact-email/contact-email';
 
 interface Block {
     id: number;
@@ -10,7 +12,7 @@ interface Block {
 
 @Component({
 selector: 'app-main-page',
-  imports: [CommonModule, FormsModule],
+  imports: [ContactEmail, ReadMoreComponent, CommonModule, FormsModule],
   templateUrl: './main-page.html',
   styleUrls: ['./main-page.css']})
 
@@ -39,6 +41,16 @@ constructor() {
 @HostListener('window:resize')
     onResize() {
     this.recalculateLayout();
+}
+
+showReadMore = false;
+
+openReadMore() {
+  this.showReadMore = true;
+}
+
+closeReadMore() {
+  this.showReadMore = false;
 }
 
 recalculateLayout() {

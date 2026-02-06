@@ -30,7 +30,7 @@
             <i class="fas fa-award fa-4x tm-block-icon"></i>
             <p>Maecenas scelerisque ex neque...</p>
             <div class="tm-text-right">
-                <a class="tm-btn tm-btn-small tm-btn-primary">Read More</a>
+                <a class="tm-btn tm-btn-small tm-btn-primary" (click)="openReadMore()">Read More</a>
             </div>
         </div>
     }
@@ -86,7 +86,8 @@
                     <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">Contact Us</h2>
                 </header>
 
-                <form class="tm-contact-form">
+                <app-contact-email></app-contact-email>
+                <!-- <form class="tm-contact-form">
                     <div class="tm-form-group">
                         <input type="text" placeholder="Name" required>
                     </div>
@@ -102,7 +103,7 @@
                     <div class="tm-text-right">
                         <button type="submit" class="tm-btn tm-btn-secondary tm-btn-pad-big">Send</button>
                     </div>
-                </form>
+                </form> -->
             </div>
 
             <div class="tm-form-section-tag">
@@ -117,3 +118,4 @@
     }
 }
 </main>
+<app-read-more *ngIf="showReadMore" (close)="closeReadMore()"></app-read-more>
